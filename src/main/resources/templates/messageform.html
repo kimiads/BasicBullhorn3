@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<br /><br />
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Welcome To My Easy Messaging Application!</h1><p></p>
+
+        <p><a class="btn btn-primary btn-lg" href="/list" role="button">See Your Messages</a></p>
+    </div>
+
+
+    <h1><p><font color="#1e90ff">Please Add Your Message:</font></h1>
+    <form method="POST" action="/add" th:object="${message}"
+          enctype="multipart/form-data">
+        Content: <input type="text" th:field="*{content}" />
+        Posted Date: <input type="text" th:field="*{posteddate}" />
+        Send By: <input type="text" th:field="*{sentby}" />
+        <input type="file" name="file" /><br/><br/><input type="submit" value="Submit" />
+    </form>
+
+</div>
+</body>
+</html>
