@@ -11,7 +11,7 @@
     Content :<span th:text="${message.content}" ></span><br />
     Posted Date :<p th:text="${message.posteddate}" ></p>
     Sent By :<span th:text="${message.sentby}" ></span><br />
-    Image: <span th:text="${message.image}" ></span><br />
+    Image: <img th:src="${message.image}"/><br />
     <a th:href="@{/delete/{id}(id=${message.id})}">Delete this message</a>
 
 
