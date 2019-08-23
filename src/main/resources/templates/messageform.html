@@ -19,6 +19,7 @@
     <h1><p><font color="#1e90ff">Please Add Your Message:</font></h1>
     <form method="POST" action="/add" th:object="${message}"
           enctype="multipart/form-data">
+        <input type="hidden" th:field="*{id}" />
         Content: <input type="text" th:field="*{content}" />
         Posted Date: <input type="text" th:field="*{posteddate}" />
         Send By: <input type="text" th:field="*{sentby}" />
