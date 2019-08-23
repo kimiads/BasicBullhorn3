@@ -84,6 +84,6 @@ public class HomeController {
     @RequestMapping("/delete/{id}")
     public String delMessage(@PathVariable("id") long id){
         messageRepository.deleteById(id);
-        return "redirect:/";
+        return "redirect:/list";
     }
 }
