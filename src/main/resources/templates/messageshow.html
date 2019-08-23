@@ -6,9 +6,10 @@
 </head>
 <body>
 <a href="/"Show All Messages></a><br />
-Id :<span th:text="${message.id}" ></span><br />
-Content :<span th:text="${message.content}" ></span><br />
-Posted Date :<p th:text="${message.posteddate}" ></p>
-Sent By :<span th:text="${message.sentby}" ></span><br />
+    Id :<span th:text="${message.id}" ></span><br />
+    Content :<span th:text="${message.content}" ></span><br />
+    Posted Date :<p th:text="${message.posteddate}" ></p>
+    Sent By :<span th:text="${message.sentby}" ></span><br />
+    <a th:href="@{/delete/{id}(id=${message.id})}">Delete this message</a>
 </body>
 </html>

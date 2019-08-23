@@ -27,6 +27,11 @@
         <h3 th:text="${message.content}"></h3>
         <h4 th:text="${message.posteddate}"></h4>
         <h5 th:text="${message.sentby}"></h5>
+        <td>
+            <a th:href="@{/update/{id}(id=${message.id})}">Update</a> -
+            <a th:href="@{/detail/{id}(id=${message.id})}">Details</a> -
+            <a th:href="@{/delete/{id}(id=${message.id})}">Delete</a>
+        </td>
         <hr />
     </div>
 </div>

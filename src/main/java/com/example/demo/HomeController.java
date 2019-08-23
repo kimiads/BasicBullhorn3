@@ -75,4 +75,15 @@ public class HomeController {
         model.addAttribute("message", messageRepository.findById(id).get());
         return "messageshow";
     }
+    @RequestMapping("/update/{id}")
+    public String updateMessage(@PathVariable("id") long id,
+                               Model model){
+        model.addAttribute("message", messageRepository.findById(id).get());
+        return "messageform";
+    }
+    @RequestMapping("/delete/{id}")
+    public String delMessage(@PathVariable("id") long id){
+        messageRepository.deleteById(id);
+        return "redirect:/";
+    }
 }
